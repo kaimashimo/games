@@ -27,6 +27,8 @@ def candidates(answers, bad, size=100):
     res = [(str(i + 1), "{0:.2f}".format(minimax(w, answers, bad)), w) for i, w in enumerate(sorted(best[:250], key=lambda w: -1 * minimax(w, answers, bad))[:size])]
     return [(". ".join([c[0], c[2]]) + " (" + c[1] + ")") for c in res]
 
+st.write("# Joshenkanator 9000")
+st.write('_so it\'s the computer\'s fault when we lose at codenames_')
 
 answers = [x.strip() for x in st.text_input('Input your comma-separated words to get:').split(',')]
 bad = [x.strip() for x in st.text_input('Input your comma-separated words to avoid:').split(',')]
