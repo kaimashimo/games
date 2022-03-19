@@ -38,3 +38,4 @@ if answers and bad:
     if generate_candidates:
         embeddings = get_dict()
         st.write(candidates(answers, bad))
+        st.balloons()
